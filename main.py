@@ -1,5 +1,4 @@
-
-from flask import Flask, render_template, send_from_directory, abort, jsonify, redirect, url_for
+from flask import Flask, render_template, send_from_directory, abort, jsonify, redirect, url_for, request
 import os
 
 app = Flask(__name__)
@@ -74,6 +73,20 @@ def dashboard():
     </body>
     </html>
     '''
+
+@app.route('/spin', methods=['POST'])
+def spin():
+    username = request.form.get('username')
+    print(f"User entered: {username}")
+    
+    # index.html ফাইলে username ব্যবহার করতে চাইলে render_template ব্যবহার করো
+    if os.path.exists('templates/index.html'):
+        return render_template('index.html', username=username)
+    
+    if os.path.exists('index.html'):
+        return send_from_directory('.', 'index.html')
+    
+    return "Game page not found", 404
 
 @app.route('/game')
 def game():
