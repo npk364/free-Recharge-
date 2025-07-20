@@ -1,13 +1,13 @@
+from flask import Flask, render_template
 
-from flask import Flask, render_template, send_from_directory, abort, jsonify
-import os
+app = Flask(name, template_folder='templates')
 
-app = Flask(__name__, static_folder='.', template_folder='.')
+@app.route('/')
+def home():
+    return render_template("dashboard.html")
 
-@app.route('/debug')
-def debug():
-    files = os.listdir('.')
-    html_files = [f for f in files if f.endswith('.html')]
+if name == 'main':
+    app.run()
     return jsonify({
         'all_files': files,
         'html_files': html_files,
