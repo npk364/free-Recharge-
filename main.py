@@ -2,7 +2,7 @@
 from flask import Flask, render_template, send_from_directory, abort, jsonify
 import os
 
-app = Flask(__name__, static_folder='.', template_folder='.')
+app = Flask(__name__, static_folder='template_folder=')
 
 @app.route('/debug')
 def debug():
