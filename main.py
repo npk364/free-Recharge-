@@ -1,7 +1,7 @@
 from flask import Flask, render_template, send_from_directory, abort, jsonify
 import os
 
-app = Flask(name, static_folder='static', template_folder='templates')
+app = Flask(name__, static_folder='static', template_folder='templates')
 
 
 @app.route('/debug')
