@@ -18,20 +18,19 @@
                 <h2>Enter Your Name</h2>
                 <p class="instruction">Please enter your name to continue to the spin game</p>
 
-                <form id="nameForm" class="name-form">
-                    <input 
-                        type="text" 
-                        id="userName" 
-                        placeholder="Enter your name here..." 
-                        class="name-input"
-                        required
-                    >
-                    <button type="submit" class="enter-btn">
-                        <span>Enter</span>
-                        <span class="btn-icon">→</span>
-                    </button>
-                </form>
-            </div>
+                <form action="/spin" method="POST" class="name-form">
+    <input 
+        type="text" 
+        name="username" 
+        placeholder="Enter your name here..." 
+        class="name-input"
+        required
+    >
+    <button type="submit" class="enter-btn">
+        <span>Enter</span>
+        <span class="btn-icon">→</span>
+    </button>
+</form>            </div>
 
             <div class="features-preview">
                 <div class="feature-item">
