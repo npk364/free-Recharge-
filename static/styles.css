@@ -805,3 +805,22 @@ footer p {
 .scratch-card:active #scratchCanvas {
     cursor: grabbing;
 }
+.telegram-button-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.telegram-button {
+    background-color: #0088cc;
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 16px;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+.telegram-button:hover {
+    background-color: #0077b3;
+}
